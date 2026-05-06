@@ -101,8 +101,15 @@ void Spaceship::move_right(float elapsed)
     pos.x += speed * elapsed;
 }
 
+void Spaceship::move_up(float elapsed)
+{
+    pos.y -= speed * elapsed;
+}
 
-
+void Spaceship::move_down(float elapsed)
+{
+    pos.y += speed * elapsed;
+}
 
 void State::update (float elapsed)
 {
@@ -110,6 +117,10 @@ void State::update (float elapsed)
         spaceship.move_left(elapsed);
     if (move_spaceship_right)
         spaceship.move_right(elapsed);
+    if (move_spaceship_up)
+        spaceship.move_up(elapsed);
+    if (move_spaceship_down)
+        spaceship.move_down(elapsed);
 }
 ////////////
 // Events //
@@ -147,6 +158,12 @@ void handle(const sf::Event::KeyPressed& key, State& state)
         case sf::Keyboard::Scancode::Right:
             state.move_spaceship_right = true;
             return;
+        case sf::Keyboard::Scancode::Up:
+            state.move_spaceship_up = true;
+            return;
+        case sf::Keyboard::Scancode::Down:
+            state.move_spaceship_down = true;
+            return;
         default:
             return;
     }
@@ -165,6 +182,12 @@ void handle(const sf::Event::KeyReleased& key, State& state)
         case sf::Keyboard::Scancode::Right:
             state.move_spaceship_right = false;
             return;
+        case sf::Keyboard::Scancode::Up:
+            state.move_spaceship_up = false;
+            return;
+        case sf::Keyboard::Scancode::Down:
+            state.move_spaceship_down = false;
+            return;
         default:
             return;
     }
@@ -180,6 +203,8 @@ void handle(const sf::Event::FocusLost&, State& state)
     state.focus = false;
     state.move_spaceship_left = false;
     state.move_spaceship_right = false;
+    state.move_spaceship_up = false;
+    state.move_spaceship_down = false;
 }
 
 

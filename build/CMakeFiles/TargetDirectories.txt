@@ -1,5 +1,6 @@
 /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles/Tappa01.dir
 /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles/Tappa02.dir
+/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles/Tappa03.dir
 /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles/package.dir
 /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles/package_source.dir
 /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles/edit_cache.dir

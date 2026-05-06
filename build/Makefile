@@ -215,6 +215,19 @@ Tappa02/fast:
 .PHONY : Tappa02/fast
 
 #=============================================================================
+# Target rules for targets named Tappa03
+
+# Build rule for target.
+Tappa03: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tappa03
+.PHONY : Tappa03
+
+# fast build rule for target.
+Tappa03/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa03.dir/build.make CMakeFiles/Tappa03.dir/build
+.PHONY : Tappa03/fast
+
+#=============================================================================
 # Target rules for targets named sfml-system
 
 # Build rule for target.
@@ -418,6 +431,30 @@ Tappa02/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa02.dir/build.make CMakeFiles/Tappa02.dir/Tappa02/main.cpp.s
 .PHONY : Tappa02/main.cpp.s
 
+Tappa03/main.o: Tappa03/main.cpp.o
+.PHONY : Tappa03/main.o
+
+# target to build an object file
+Tappa03/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa03.dir/build.make CMakeFiles/Tappa03.dir/Tappa03/main.cpp.o
+.PHONY : Tappa03/main.cpp.o
+
+Tappa03/main.i: Tappa03/main.cpp.i
+.PHONY : Tappa03/main.i
+
+# target to preprocess a source file
+Tappa03/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa03.dir/build.make CMakeFiles/Tappa03.dir/Tappa03/main.cpp.i
+.PHONY : Tappa03/main.cpp.i
+
+Tappa03/main.s: Tappa03/main.cpp.s
+.PHONY : Tappa03/main.s
+
+# target to generate assembly for a file
+Tappa03/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa03.dir/build.make CMakeFiles/Tappa03.dir/Tappa03/main.cpp.s
+.PHONY : Tappa03/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -436,6 +473,7 @@ help:
 	@echo "... FLAC"
 	@echo "... Tappa01"
 	@echo "... Tappa02"
+	@echo "... Tappa03"
 	@echo "... benchmark_residual"
 	@echo "... freetype"
 	@echo "... ogg"
@@ -453,6 +491,9 @@ help:
 	@echo "... Tappa02/main.o"
 	@echo "... Tappa02/main.i"
 	@echo "... Tappa02/main.s"
+	@echo "... Tappa03/main.o"
+	@echo "... Tappa03/main.i"
+	@echo "... Tappa03/main.s"
 .PHONY : help
 
 

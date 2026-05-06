@@ -1,16 +1,18 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/System/Clock.hpp>
 #include "textures.hpp"
 //////////////////////
 // Initial defaults //
 //////////////////////
 
 // window
-const char* window_title = "02 - texture";
+const char* window_title = "03 - move spaceship";
 const unsigned window_width = 800;
 const unsigned window_height = 600;
 const float max_frame_rate = 60;
 
 // spaceship
+const float spaceship_speed = 400.0;
 const sf::Vector2f spaceship_size = {80.0, 80.0};
 
 ///////////////////////////////////
@@ -22,17 +24,34 @@ struct Spaceship
     sf::Vector2f size;
     sf::Vector2f pos;
     sf::Texture texture;
+    float speed;
 
     Spaceship();
     void draw(sf::RenderWindow& window);
+    void move_left(float elapsed); 
+    void move_right(float elapsed); 
+    void move_up(float elapsed);
+    void move_down(float elapsed);
 };
 
 struct State
 {
     Spaceship spaceship;
+    bool move_spaceship_left;  
+    bool move_spaceship_right; 
+    bool move_spaceship_up;
+    bool move_spaceship_down;
+    bool focus;                
 
-    State() {}
+    State() : spaceship(), 
+              move_spaceship_left(false), 
+              move_spaceship_right(false), 
+              move_spaceship_up(false),
+              move_spaceship_down(false),
+              focus(false) {}
+              
     void draw(sf::RenderWindow& window);
+    void update(float elapsed); 
 };
 
 ///////////////////////////////////
@@ -46,6 +65,7 @@ Spaceship::Spaceship ()
     float spaceship_py = (float) window_height - spaceship_size.y;
     pos = {spaceship_px, spaceship_py};
     texture = sf::Texture(spaceship_png, spaceship_png_len);
+    speed = spaceship_speed;
 }
 
 
@@ -67,8 +87,30 @@ void State::draw (sf::RenderWindow& window)
     spaceship.draw(window);
 }
 
+////////////
+// Update //
+////////////
+
+void Spaceship::move_left(float elapsed)
+{
+    pos.x -= speed * elapsed;
+}
+
+void Spaceship::move_right(float elapsed)
+{
+    pos.x += speed * elapsed;
+}
 
 
+
+
+void State::update (float elapsed)
+{
+    if (move_spaceship_left)
+        spaceship.move_left(elapsed);
+    if (move_spaceship_right)
+        spaceship.move_right(elapsed);
+}
 ////////////
 // Events //
 ////////////
@@ -89,6 +131,57 @@ void handle_resize (const sf::Event::Resized& resized, sf::RenderWindow& window)
     window.setSize(ws);
 }
 
+template <typename T>
+void handle (T& event, State& state) {}
+
+void handle(const sf::Event::KeyPressed& key, State& state)
+{
+    if(!state.focus)
+        return;
+
+    switch(key.scancode)
+    {
+        case sf::Keyboard::Scancode::Left:
+            state.move_spaceship_left = true;
+            return;
+        case sf::Keyboard::Scancode::Right:
+            state.move_spaceship_right = true;
+            return;
+        default:
+            return;
+    }
+}
+
+void handle(const sf::Event::KeyReleased& key, State& state)
+{
+    if(!state.focus)
+        return;
+    
+    switch(key.scancode)
+    {
+        case sf::Keyboard::Scancode::Left:
+            state.move_spaceship_left = false;
+            return;
+        case sf::Keyboard::Scancode::Right:
+            state.move_spaceship_right = false;
+            return;
+        default:
+            return;
+    }
+}
+
+void handle(const sf::Event::FocusGained&, State& state)
+{
+    state.focus = true;
+}
+
+void handle(const sf::Event::FocusLost&, State& state)
+{
+    state.focus = false;
+    state.move_spaceship_left = false;
+    state.move_spaceship_right = false;
+}
+
 
 
 //////////
@@ -102,14 +195,19 @@ int main()
     window.setMinimumSize(window.getSize());
 
     State state;
+    sf::Clock clock;
 
     while (window.isOpen())
     {
         // events
         window.handleEvents (
                              [&window](const sf::Event::Closed&) { handle_close (window); },
-                             [&window](const sf::Event::Resized& event) { handle_resize (event, window); }
+                             [&window](const sf::Event::Resized& event) { handle_resize (event, window); },
+                             [&state](const auto& event) { handle (event, state); } 
         );
+
+        // update
+        state.update (clock.restart().asSeconds()); 
 
         // display
         window.clear (sf::Color::Black);

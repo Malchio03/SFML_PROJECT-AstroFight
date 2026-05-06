@@ -65,11 +65,13 @@ CMAKE_BINARY_DIR = /Users/iraxty/Desktop/SFML-AstroFightClone/build
 # The main recursive "all" target.
 all: CMakeFiles/Tappa01.dir/all
 all: CMakeFiles/Tappa02.dir/all
+all: CMakeFiles/Tappa03.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/Tappa01.dir/codegen
 codegen: CMakeFiles/Tappa02.dir/codegen
+codegen: CMakeFiles/Tappa03.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -79,6 +81,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/Tappa01.dir/clean
 clean: CMakeFiles/Tappa02.dir/clean
+clean: CMakeFiles/Tappa03.dir/clean
 clean: _deps/sfml-build/clean
 .PHONY : clean
 
@@ -478,18 +481,53 @@ CMakeFiles/Tappa02.dir/clean:
 .PHONY : CMakeFiles/Tappa02.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/Tappa03.dir
+
+# All Build rule for target.
+CMakeFiles/Tappa03.dir/all: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/all
+CMakeFiles/Tappa03.dir/all: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/all
+CMakeFiles/Tappa03.dir/all: _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all
+CMakeFiles/Tappa03.dir/all: _deps/freetype-build/CMakeFiles/freetype.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa03.dir/build.make CMakeFiles/Tappa03.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa03.dir/build.make CMakeFiles/Tappa03.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=17 "Built target Tappa03"
+.PHONY : CMakeFiles/Tappa03.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Tappa03.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 55
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Tappa03.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 0
+.PHONY : CMakeFiles/Tappa03.dir/rule
+
+# Convenience name for target.
+Tappa03: CMakeFiles/Tappa03.dir/rule
+.PHONY : Tappa03
+
+# codegen rule for target.
+CMakeFiles/Tappa03.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa03.dir/build.make CMakeFiles/Tappa03.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=17 "Finished codegen for target Tappa03"
+.PHONY : CMakeFiles/Tappa03.dir/codegen
+
+# clean rule for target.
+CMakeFiles/Tappa03.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa03.dir/build.make CMakeFiles/Tappa03.dir/clean
+.PHONY : CMakeFiles/Tappa03.dir/clean
+
+#=============================================================================
 # Target rules for target _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir
 
 # All Build rule for target.
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/build.make _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/build.make _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=67,68,69,70 "Built target sfml-system"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=67,68,69,70,71 "Built target sfml-system"
 .PHONY : _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 0
 .PHONY : _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/rule
@@ -501,7 +539,7 @@ sfml-system: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/rule
 # codegen rule for target.
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/build.make _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=67,68,69,70 "Finished codegen for target sfml-system"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=67,68,69,70,71 "Finished codegen for target sfml-system"
 .PHONY : _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/codegen
 
 # clean rule for target.
@@ -516,12 +554,12 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/clean:
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/all: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88 "Built target sfml-window"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89 "Built target sfml-window"
 .PHONY : _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 0
 .PHONY : _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/rule
@@ -533,7 +571,7 @@ sfml-window: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/rule
 # codegen rule for target.
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88 "Finished codegen for target sfml-window"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89 "Finished codegen for target sfml-window"
 .PHONY : _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/codegen
 
 # clean rule for target.
@@ -553,7 +591,7 @@ _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/all: _deps/sfml-bu
 
 # Build rule for subdir invocation for target.
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 0
 .PHONY : _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/rule
@@ -582,7 +620,7 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all: _deps/sfml-
 _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all: _deps/freetype-build/CMakeFiles/freetype.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build.make _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build.make _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=49,50,51,52,53,54,55,56,57,58,59,60,61 "Built target sfml-graphics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=50,51,52,53,54,55,56,57,58,59,60,61 "Built target sfml-graphics"
 .PHONY : _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all
 
 # Build rule for subdir invocation for target.
@@ -599,7 +637,7 @@ sfml-graphics: _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/r
 # codegen rule for target.
 _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build.make _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=49,50,51,52,53,54,55,56,57,58,59,60,61 "Finished codegen for target sfml-graphics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=50,51,52,53,54,55,56,57,58,59,60,61 "Finished codegen for target sfml-graphics"
 .PHONY : _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/codegen
 
 # clean rule for target.
@@ -651,12 +689,12 @@ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all: _deps/vorbis-buil
 _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all: _deps/vorbis-build/lib/CMakeFiles/vorbisfile.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=39,40,41,42,43,44,45,46,47,48 "Built target sfml-audio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=39,40,41,42,43,44,45,46,47,48,49 "Built target sfml-audio"
 .PHONY : _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 41
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 42
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 0
 .PHONY : _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/rule
@@ -668,7 +706,7 @@ sfml-audio: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/rule
 # codegen rule for target.
 _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=39,40,41,42,43,44,45,46,47,48 "Finished codegen for target sfml-audio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=39,40,41,42,43,44,45,46,47,48,49 "Finished codegen for target sfml-audio"
 .PHONY : _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/codegen
 
 # clean rule for target.
@@ -748,12 +786,12 @@ _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/all: _deps/ogg-bui
 _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/all: _deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/build.make _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/build.make _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=17,18 "Built target benchmark_residual"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=18 "Built target benchmark_residual"
 .PHONY : _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 0
 .PHONY : _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/rule
@@ -765,7 +803,7 @@ benchmark_residual: _deps/flac-build/microbench/CMakeFiles/benchmark_residual.di
 # codegen rule for target.
 _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/build.make _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=17,18 "Finished codegen for target benchmark_residual"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=18 "Finished codegen for target benchmark_residual"
 .PHONY : _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/codegen
 
 # clean rule for target.
@@ -780,12 +818,12 @@ _deps/flac-build/microbench/CMakeFiles/benchmark_residual.dir/clean:
 _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/all: _deps/ogg-build/CMakeFiles/ogg.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/build.make _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/build.make _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=89,90,91,92,93,94,95,96,97,98 "Built target vorbis"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=90,91,92,93,94,95,96,97,98 "Built target vorbis"
 .PHONY : _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 0
 .PHONY : _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/rule
@@ -797,7 +835,7 @@ vorbis: _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/rule
 # codegen rule for target.
 _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/build.make _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=89,90,91,92,93,94,95,96,97,98 "Finished codegen for target vorbis"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles --progress-num=90,91,92,93,94,95,96,97,98 "Finished codegen for target vorbis"
 .PHONY : _deps/vorbis-build/lib/CMakeFiles/vorbis.dir/codegen
 
 # clean rule for target.
@@ -818,7 +856,7 @@ _deps/vorbis-build/lib/CMakeFiles/vorbisenc.dir/all: _deps/vorbis-build/lib/CMak
 
 # Build rule for subdir invocation for target.
 _deps/vorbis-build/lib/CMakeFiles/vorbisenc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vorbis-build/lib/CMakeFiles/vorbisenc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 0
 .PHONY : _deps/vorbis-build/lib/CMakeFiles/vorbisenc.dir/rule
@@ -851,7 +889,7 @@ _deps/vorbis-build/lib/CMakeFiles/vorbisfile.dir/all: _deps/vorbis-build/lib/CMa
 
 # Build rule for subdir invocation for target.
 _deps/vorbis-build/lib/CMakeFiles/vorbisfile.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vorbis-build/lib/CMakeFiles/vorbisfile.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/iraxty/Desktop/SFML-AstroFightClone/build/CMakeFiles 0
 .PHONY : _deps/vorbis-build/lib/CMakeFiles/vorbisfile.dir/rule

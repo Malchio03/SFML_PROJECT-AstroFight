@@ -34,6 +34,10 @@ struct State
     void draw(sf::RenderWindow& window);
 };
 
+///////////////////////////////////
+// Constructors //
+///////////////////////////////////
+
 Spaceship::Spaceship ()
 {
     size = spaceship_size;

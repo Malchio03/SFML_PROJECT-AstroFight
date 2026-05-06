@@ -202,6 +202,19 @@ Tappa01/fast:
 .PHONY : Tappa01/fast
 
 #=============================================================================
+# Target rules for targets named Tappa02
+
+# Build rule for target.
+Tappa02: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tappa02
+.PHONY : Tappa02
+
+# fast build rule for target.
+Tappa02/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa02.dir/build.make CMakeFiles/Tappa02.dir/build
+.PHONY : Tappa02/fast
+
+#=============================================================================
 # Target rules for targets named sfml-system
 
 # Build rule for target.
@@ -381,6 +394,30 @@ Tappa01/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa01.dir/build.make CMakeFiles/Tappa01.dir/Tappa01/main.cpp.s
 .PHONY : Tappa01/main.cpp.s
 
+Tappa02/main.o: Tappa02/main.cpp.o
+.PHONY : Tappa02/main.o
+
+# target to build an object file
+Tappa02/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa02.dir/build.make CMakeFiles/Tappa02.dir/Tappa02/main.cpp.o
+.PHONY : Tappa02/main.cpp.o
+
+Tappa02/main.i: Tappa02/main.cpp.i
+.PHONY : Tappa02/main.i
+
+# target to preprocess a source file
+Tappa02/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa02.dir/build.make CMakeFiles/Tappa02.dir/Tappa02/main.cpp.i
+.PHONY : Tappa02/main.cpp.i
+
+Tappa02/main.s: Tappa02/main.cpp.s
+.PHONY : Tappa02/main.s
+
+# target to generate assembly for a file
+Tappa02/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa02.dir/build.make CMakeFiles/Tappa02.dir/Tappa02/main.cpp.s
+.PHONY : Tappa02/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -398,6 +435,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... FLAC"
 	@echo "... Tappa01"
+	@echo "... Tappa02"
 	@echo "... benchmark_residual"
 	@echo "... freetype"
 	@echo "... ogg"
@@ -412,6 +450,9 @@ help:
 	@echo "... Tappa01/main.o"
 	@echo "... Tappa01/main.i"
 	@echo "... Tappa01/main.s"
+	@echo "... Tappa02/main.o"
+	@echo "... Tappa02/main.i"
+	@echo "... Tappa02/main.s"
 .PHONY : help
 
 

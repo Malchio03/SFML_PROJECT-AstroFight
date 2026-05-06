@@ -1,0 +1,27 @@
+_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/macOS/SensorImpl.cpp.o: \
+  /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-src/src/SFML/Window/macOS/SensorImpl.cpp \
+  /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-src/src/SFML/Window/SensorImpl.hpp \
+  /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h \
+  /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-src/include/SFML/Window/Sensor.hpp \
+  /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+  /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-src/include/SFML/System/Vector3.hpp \
+  /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+  /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-src/include/SFML/System/Vector3.inl \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/abi.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/compiler.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/platform.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/availability.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/language.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/experimental.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/hardening.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_posix_availability.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/ptrcheck.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
+  /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-src/src/SFML/Window/macOS/SensorImpl.hpp

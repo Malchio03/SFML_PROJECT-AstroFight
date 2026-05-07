@@ -55,11 +55,11 @@ set_target_properties(FLAC::FLAC PROPERTIES
   INTERFACE_LINK_LIBRARIES "\$<\$<BOOL:1>:m>;Ogg::ogg"
 )
 
-# Import target "FLAC::FLAC" for configuration "Release"
-set_property(TARGET FLAC::FLAC APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+# Import target "FLAC::FLAC" for configuration ""
+set_property(TARGET FLAC::FLAC APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(FLAC::FLAC PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LOCATION_RELEASE "/Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-build/lib/libFLAC.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "C"
+  IMPORTED_LOCATION_NOCONFIG "/Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-build/lib/libFLAC.a"
   )
 
 # Make sure the targets which have been exported in some other

@@ -6,7 +6,7 @@ C_DEFINES = -DFT2_BUILD_LIBRARY
 
 C_INCLUDES = -I/Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/freetype-build/include -I/Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/freetype-src/include -I/Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/freetype-build/include/freetype/config
 
-C_FLAGSarm64 = -O3 -DNDEBUG -arch arm64 -fvisibility=hidden
+C_FLAGSarm64 =  -arch arm64 -fvisibility=hidden
 
-C_FLAGS = -O3 -DNDEBUG -arch arm64 -fvisibility=hidden
+C_FLAGS =  -arch arm64 -fvisibility=hidden
 

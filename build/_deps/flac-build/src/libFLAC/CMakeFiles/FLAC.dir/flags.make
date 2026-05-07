@@ -6,7 +6,7 @@ C_DEFINES = -DFLAC__NO_DLL -DHAVE_CONFIG_H -DNDEBUG -D_DARWIN_C_SOURCE -D_POSIX_
 
 C_INCLUDES = -I/Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/flac-src/include -I/Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/flac-build -I/Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/flac-src/src/libFLAC/include -isystem /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/ogg-src/include -isystem /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/ogg-build/include
 
-C_FLAGSarm64 = -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DNDEBUG -O3 -DNDEBUG -arch arm64 -Wdeclaration-after-statement -fassociative-math -fno-signed-zeros -fno-trapping-math -freciprocal-math
+C_FLAGSarm64 = -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -arch arm64 -Wdeclaration-after-statement -fassociative-math -fno-signed-zeros -fno-trapping-math -freciprocal-math
 
-C_FLAGS = -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DNDEBUG -O3 -DNDEBUG -arch arm64 -Wdeclaration-after-statement -fassociative-math -fno-signed-zeros -fno-trapping-math -freciprocal-math
+C_FLAGS = -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -arch arm64 -Wdeclaration-after-statement -fassociative-math -fno-signed-zeros -fno-trapping-math -freciprocal-math
 

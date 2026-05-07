@@ -95,9 +95,9 @@ Tappa01_EXTERNAL_OBJECTS =
 
 Tappa01: CMakeFiles/Tappa01.dir/Tappa01/main.cpp.o
 Tappa01: CMakeFiles/Tappa01.dir/build.make
-Tappa01: _deps/sfml-build/lib/libsfml-graphics-s.a
-Tappa01: _deps/sfml-build/lib/libsfml-window-s.a
-Tappa01: _deps/sfml-build/lib/libsfml-system-s.a
+Tappa01: _deps/sfml-build/lib/libsfml-graphics.a
+Tappa01: _deps/sfml-build/lib/libsfml-window.a
+Tappa01: _deps/sfml-build/lib/libsfml-system.a
 Tappa01: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
 Tappa01: _deps/sfml-build/lib/libfreetype.a
 Tappa01: CMakeFiles/Tappa01.dir/link.txt

@@ -228,6 +228,19 @@ Tappa03/fast:
 .PHONY : Tappa03/fast
 
 #=============================================================================
+# Target rules for targets named Tappa04
+
+# Build rule for target.
+Tappa04: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tappa04
+.PHONY : Tappa04
+
+# fast build rule for target.
+Tappa04/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa04.dir/build.make CMakeFiles/Tappa04.dir/build
+.PHONY : Tappa04/fast
+
+#=============================================================================
 # Target rules for targets named sfml-system
 
 # Build rule for target.
@@ -455,6 +468,30 @@ Tappa03/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa03.dir/build.make CMakeFiles/Tappa03.dir/Tappa03/main.cpp.s
 .PHONY : Tappa03/main.cpp.s
 
+Tappa04/main.o: Tappa04/main.cpp.o
+.PHONY : Tappa04/main.o
+
+# target to build an object file
+Tappa04/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa04.dir/build.make CMakeFiles/Tappa04.dir/Tappa04/main.cpp.o
+.PHONY : Tappa04/main.cpp.o
+
+Tappa04/main.i: Tappa04/main.cpp.i
+.PHONY : Tappa04/main.i
+
+# target to preprocess a source file
+Tappa04/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa04.dir/build.make CMakeFiles/Tappa04.dir/Tappa04/main.cpp.i
+.PHONY : Tappa04/main.cpp.i
+
+Tappa04/main.s: Tappa04/main.cpp.s
+.PHONY : Tappa04/main.s
+
+# target to generate assembly for a file
+Tappa04/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa04.dir/build.make CMakeFiles/Tappa04.dir/Tappa04/main.cpp.s
+.PHONY : Tappa04/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -474,6 +511,7 @@ help:
 	@echo "... Tappa01"
 	@echo "... Tappa02"
 	@echo "... Tappa03"
+	@echo "... Tappa04"
 	@echo "... benchmark_residual"
 	@echo "... freetype"
 	@echo "... ogg"
@@ -494,6 +532,9 @@ help:
 	@echo "... Tappa03/main.o"
 	@echo "... Tappa03/main.i"
 	@echo "... Tappa03/main.s"
+	@echo "... Tappa04/main.o"
+	@echo "... Tappa04/main.i"
+	@echo "... Tappa04/main.s"
 .PHONY : help
 
 

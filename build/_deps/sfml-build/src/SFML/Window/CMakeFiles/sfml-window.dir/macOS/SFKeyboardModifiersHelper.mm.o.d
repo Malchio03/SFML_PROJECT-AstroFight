@@ -774,6 +774,7 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/macOS/SFKeyboardModi
   /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-src/include/SFML/System/Angle.inl \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
   /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/sfml-src/include/SFML/Window/Sensor.hpp \

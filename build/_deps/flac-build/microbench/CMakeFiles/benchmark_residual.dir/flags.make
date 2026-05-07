@@ -6,7 +6,7 @@ C_DEFINES = -DFLAC__NO_DLL -DFLAC__SYS_DARWIN -DHAVE_CONFIG_H -D_DARWIN_C_SOURCE
 
 C_INCLUDES = -I/Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/flac-build -I/Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/flac-src/src/libFLAC/include -isystem /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/flac-src/include -isystem /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/ogg-src/include -isystem /Users/iraxty/Desktop/SFML-AstroFightClone/build/_deps/ogg-build/include
 
-C_FLAGSarm64 = -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DNDEBUG -O3 -DNDEBUG -arch arm64 -Wdeclaration-after-statement
+C_FLAGSarm64 = -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -arch arm64 -Wdeclaration-after-statement
 
-C_FLAGS = -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DNDEBUG -O3 -DNDEBUG -arch arm64 -Wdeclaration-after-statement
+C_FLAGS = -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -arch arm64 -Wdeclaration-after-statement
 

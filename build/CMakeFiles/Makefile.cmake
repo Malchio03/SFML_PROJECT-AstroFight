@@ -208,6 +208,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Tappa03.dir/DependInfo.cmake"
   "CMakeFiles/Tappa04.dir/DependInfo.cmake"
   "CMakeFiles/Tappa05.dir/DependInfo.cmake"
+  "CMakeFiles/Tappa06.dir/DependInfo.cmake"
   "_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/DependInfo.cmake"
   "_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/DependInfo.cmake"
   "_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/DependInfo.cmake"

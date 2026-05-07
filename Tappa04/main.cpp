@@ -6,7 +6,7 @@
 //////////////////////
 
 // window
-const char* window_title = "03 - move spaceship";
+const char* window_title = "04 - field limits";
 const unsigned window_width = 800;
 const unsigned window_height = 600;
 const float max_frame_rate = 60;

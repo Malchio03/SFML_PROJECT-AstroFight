@@ -30,6 +30,15 @@ const sf::Vector2f enemy_size = {145.0, 145.0};
 ///////////////////////////////////
 // Internal state representation //
 ///////////////////////////////////
+struct Background
+{
+    sf::Texture texture;
+    sf::RectangleShape shape;
+
+    Background();
+    void draw(sf::RenderWindow& window);
+};
+
 struct Bullet
 {
     sf::Vector2f pos;
@@ -70,6 +79,7 @@ struct State
 {
     Spaceship spaceship;
     Enemy enemy;
+    Background background;
     bool move_spaceship_left;  
     bool move_spaceship_right; 
     bool move_spaceship_up;
@@ -113,7 +123,16 @@ Enemy::Enemy()
     pos = {enemy_px, enemy_py};
     texture = sf::Texture(enemy_png, enemy_png_len);
 
-};
+}
+
+Background::Background()
+{
+    texture = sf::Texture(bg_png, bg_png_len);
+    texture.setRepeated(true);
+    shape.setSize({800.0f, 600.0f});
+    shape.setTexture(&texture);
+    shape.setTextureRect(sf::IntRect({0, 0}, {800, 600}));
+}
 
 //////////
 // Draw //
@@ -153,8 +172,14 @@ void Enemy::draw(sf::RenderWindow& window)
     }
 }
 
+void Background::draw (sf::RenderWindow& window)
+{
+    window.draw(shape);
+}
+
 void State::draw (sf::RenderWindow& window)
 {
+    background.draw(window);
     spaceship.draw(window);
     enemy.draw(window);
 }

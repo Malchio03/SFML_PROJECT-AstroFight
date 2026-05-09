@@ -280,6 +280,19 @@ Tappa07/fast:
 .PHONY : Tappa07/fast
 
 #=============================================================================
+# Target rules for targets named Tappa08
+
+# Build rule for target.
+Tappa08: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tappa08
+.PHONY : Tappa08
+
+# fast build rule for target.
+Tappa08/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa08.dir/build.make CMakeFiles/Tappa08.dir/build
+.PHONY : Tappa08/fast
+
+#=============================================================================
 # Target rules for targets named sfml-system
 
 # Build rule for target.
@@ -603,6 +616,30 @@ Tappa07/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa07.dir/build.make CMakeFiles/Tappa07.dir/Tappa07/main.cpp.s
 .PHONY : Tappa07/main.cpp.s
 
+Tappa08/main.o: Tappa08/main.cpp.o
+.PHONY : Tappa08/main.o
+
+# target to build an object file
+Tappa08/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa08.dir/build.make CMakeFiles/Tappa08.dir/Tappa08/main.cpp.o
+.PHONY : Tappa08/main.cpp.o
+
+Tappa08/main.i: Tappa08/main.cpp.i
+.PHONY : Tappa08/main.i
+
+# target to preprocess a source file
+Tappa08/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa08.dir/build.make CMakeFiles/Tappa08.dir/Tappa08/main.cpp.i
+.PHONY : Tappa08/main.cpp.i
+
+Tappa08/main.s: Tappa08/main.cpp.s
+.PHONY : Tappa08/main.s
+
+# target to generate assembly for a file
+Tappa08/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa08.dir/build.make CMakeFiles/Tappa08.dir/Tappa08/main.cpp.s
+.PHONY : Tappa08/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -626,6 +663,7 @@ help:
 	@echo "... Tappa05"
 	@echo "... Tappa06"
 	@echo "... Tappa07"
+	@echo "... Tappa08"
 	@echo "... benchmark_residual"
 	@echo "... freetype"
 	@echo "... ogg"
@@ -658,6 +696,9 @@ help:
 	@echo "... Tappa07/main.o"
 	@echo "... Tappa07/main.i"
 	@echo "... Tappa07/main.s"
+	@echo "... Tappa08/main.o"
+	@echo "... Tappa08/main.i"
+	@echo "... Tappa08/main.s"
 .PHONY : help
 
 

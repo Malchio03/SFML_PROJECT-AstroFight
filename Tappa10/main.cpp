@@ -11,7 +11,7 @@
 //////////////////////
 
 // window
-const char* window_title = "09 - enemy waves";
+const char* window_title = "10 - explosions";
 const unsigned window_width = 800;
 const unsigned window_height = 600;
 const float max_frame_rate = 60;
@@ -401,31 +401,15 @@ void State::update (float elapsed)
         all_moving_right = !all_moving_right;
 
         float limite_inferiore = (window_height / 2.0) - enemy_size.y;
-        float max_y = 0.0f;
-
-        for (int i = 0; i < enemies_per_wave; ++i)
-        {
-            if (enemies[i].isAlive && enemies[i].pos.y > max_y)
-            {
-                max_y = enemies[i].pos.y;
-            }
-        }
-
-        float drop_amount = 20.0f;
-        if (max_y + drop_amount > limite_inferiore)
-        {
-            drop_amount = limite_inferiore - max_y;
-            if (drop_amount < 0.0f)
-            {
-                drop_amount = 0.0f;
-            } 
-        }
 
         for (int i = 0; i < enemies_per_wave; ++i)
         {
             if(!enemies[i].isAlive) continue;
-            
-            enemies[i].pos.y += drop_amount; 
+            enemies[i].pos.y += 20.0; // discesa nemico
+            if(enemies[i].pos.y > limite_inferiore)
+            {
+                enemies[i].pos.y = limite_inferiore;
+            }
         }
     }
 
@@ -433,7 +417,7 @@ void State::update (float elapsed)
     {
         if(!enemies[i].isAlive) continue;
 
-        // horizontal movements
+        // horizontal movemente
         if(all_moving_right)
         {
             enemies[i].pos.x += enemy_speed * elapsed;
@@ -467,9 +451,7 @@ void State::update (float elapsed)
                 enemies[i].bullets.pop_back();
             }
             else
-            {
                 ++b;
-            }     
         }
     }
     collisions();

@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System/Clock.hpp>
+#include <SFML/Audio.hpp>
 #include <vector>
 #include<algorithm>
 #include <iostream>
@@ -11,7 +12,7 @@
 //////////////////////
 
 // window
-const char* window_title = "10 - explosions";
+const char* window_title = "10 - sfx & music";
 const unsigned window_width = 800;
 const unsigned window_height = 600;
 const float max_frame_rate = 60;
@@ -109,15 +110,63 @@ struct State
     bool move_spaceship_right; 
     bool move_spaceship_up;
     bool move_spaceship_down;
-    bool focus;                
+    bool focus; 
+
+    // AUDIO
+
+    // bg music
+    sf::Music bgMusic;
+
+    // sound buffer
+    sf::SoundBuffer shootBuffer;
+    sf::SoundBuffer enemyShootBuffer;
+    sf::SoundBuffer hitBuffer;
+    
+    // sound to add to the sound buffer
+    sf::Sound shootSound;
+    sf::Sound enemyShootSound;
+    sf::Sound hitSound;           
 
     State() : spaceship(), 
               move_spaceship_left(false), 
               move_spaceship_right(false), 
               move_spaceship_up(false),
               move_spaceship_down(false),
-              focus(false) 
+              focus(false),
+              shootSound(shootBuffer),
+              enemyShootSound(enemyShootBuffer),
+              hitSound(hitBuffer)
               {
+                // music loading
+                if (!bgMusic.openFromFile("../resources/background.ogg")) 
+                {
+                    std::cout << "background.ogg not found\n";
+                }
+                bgMusic.setLooping(true); 
+                bgMusic.setVolume(60.0f);
+                bgMusic.play();
+
+                // sfx loading
+                if(!shootBuffer.loadFromFile("../resources/shoot.wav"))
+                {
+                    std::cout << "shoot.wav not found\n";
+                }
+                shootSound.setBuffer(shootBuffer);
+                shootSound.setVolume(20.0f);
+
+                if (!enemyShootBuffer.loadFromFile("../resources/enemy_shoot.wav"))
+                {
+                    std::cout << "enemy_shoot.wav not found\n";
+                }
+                enemyShootSound.setBuffer(enemyShootBuffer);
+                enemyShootSound.setVolume(20.0f);
+                if (!hitBuffer.loadFromFile("../resources/explosion.wav"))
+                {
+                    std::cout << "explosion.wav not found\n";
+                }
+                hitSound.setBuffer(hitBuffer);
+                hitSound.setVolume(20.0f);
+
                 spawn_wave();
               }
           
@@ -306,6 +355,7 @@ void State::collisions()
                 enemies[e].isAlive = false;
                 active_enemies--;
                 hit = true;
+                hitSound.play();
                 break;
             }
         }
@@ -431,6 +481,7 @@ void State::update (float elapsed)
         {
             enemies[i].fire();
             enemies[i].fire_timer = 0.0;
+            enemyShootSound.play();
         }
 
         // enemies bullets
@@ -557,6 +608,7 @@ void handle(const sf::Event::KeyPressed& key, State& state)
             {
                 state.spaceship.fire();
                 state.spaceship.fire_timer = 0.0f; 
+                state.shootSound.play();
             }
             return;
         default:

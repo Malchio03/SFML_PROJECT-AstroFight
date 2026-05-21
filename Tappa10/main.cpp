@@ -143,7 +143,7 @@ struct State
                     std::cout << "background.ogg not found\n";
                 }
                 bgMusic.setLooping(true); 
-                bgMusic.setVolume(60.0f);
+                bgMusic.setVolume(60.0);
                 bgMusic.play();
 
                 // sfx loading
@@ -152,20 +152,20 @@ struct State
                     std::cout << "shoot.wav not found\n";
                 }
                 shootSound.setBuffer(shootBuffer);
-                shootSound.setVolume(20.0f);
+                shootSound.setVolume(20.0);
 
                 if (!enemyShootBuffer.loadFromFile("../resources/enemy_shoot.wav"))
                 {
                     std::cout << "enemy_shoot.wav not found\n";
                 }
                 enemyShootSound.setBuffer(enemyShootBuffer);
-                enemyShootSound.setVolume(20.0f);
+                enemyShootSound.setVolume(20.0);
                 if (!hitBuffer.loadFromFile("../resources/explosion.wav"))
                 {
                     std::cout << "explosion.wav not found\n";
                 }
                 hitSound.setBuffer(hitBuffer);
-                hitSound.setVolume(20.0f);
+                hitSound.setVolume(20.0);
 
                 spawn_wave();
               }
@@ -451,15 +451,31 @@ void State::update (float elapsed)
         all_moving_right = !all_moving_right;
 
         float limite_inferiore = (window_height / 2.0) - enemy_size.y;
+        float max_y = 0.0f;
+
+        for (int i = 0; i < enemies_per_wave; ++i)
+        {
+            if (enemies[i].isAlive && enemies[i].pos.y > max_y)
+            {
+                max_y = enemies[i].pos.y;
+            }
+        }
+
+        float drop_amount = 20.0f;
+        if (max_y + drop_amount > limite_inferiore)
+        {
+            drop_amount = limite_inferiore - max_y;
+            if (drop_amount < 0.0f)
+            {
+                drop_amount = 0.0f;
+            } 
+        }
 
         for (int i = 0; i < enemies_per_wave; ++i)
         {
             if(!enemies[i].isAlive) continue;
-            enemies[i].pos.y += 20.0; // discesa nemico
-            if(enemies[i].pos.y > limite_inferiore)
-            {
-                enemies[i].pos.y = limite_inferiore;
-            }
+            
+            enemies[i].pos.y += drop_amount; 
         }
     }
 

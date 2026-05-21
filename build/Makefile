@@ -319,6 +319,19 @@ Tappa10/fast:
 .PHONY : Tappa10/fast
 
 #=============================================================================
+# Target rules for targets named Tappa11
+
+# Build rule for target.
+Tappa11: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tappa11
+.PHONY : Tappa11
+
+# fast build rule for target.
+Tappa11/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa11.dir/build.make CMakeFiles/Tappa11.dir/build
+.PHONY : Tappa11/fast
+
+#=============================================================================
 # Target rules for targets named sfml-system
 
 # Build rule for target.
@@ -714,6 +727,30 @@ Tappa10/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa10.dir/build.make CMakeFiles/Tappa10.dir/Tappa10/main.cpp.s
 .PHONY : Tappa10/main.cpp.s
 
+Tappa11/main.o: Tappa11/main.cpp.o
+.PHONY : Tappa11/main.o
+
+# target to build an object file
+Tappa11/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa11.dir/build.make CMakeFiles/Tappa11.dir/Tappa11/main.cpp.o
+.PHONY : Tappa11/main.cpp.o
+
+Tappa11/main.i: Tappa11/main.cpp.i
+.PHONY : Tappa11/main.i
+
+# target to preprocess a source file
+Tappa11/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa11.dir/build.make CMakeFiles/Tappa11.dir/Tappa11/main.cpp.i
+.PHONY : Tappa11/main.cpp.i
+
+Tappa11/main.s: Tappa11/main.cpp.s
+.PHONY : Tappa11/main.s
+
+# target to generate assembly for a file
+Tappa11/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa11.dir/build.make CMakeFiles/Tappa11.dir/Tappa11/main.cpp.s
+.PHONY : Tappa11/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -740,6 +777,7 @@ help:
 	@echo "... Tappa08"
 	@echo "... Tappa09"
 	@echo "... Tappa10"
+	@echo "... Tappa11"
 	@echo "... benchmark_residual"
 	@echo "... freetype"
 	@echo "... ogg"
@@ -781,6 +819,9 @@ help:
 	@echo "... Tappa10/main.o"
 	@echo "... Tappa10/main.i"
 	@echo "... Tappa10/main.s"
+	@echo "... Tappa11/main.o"
+	@echo "... Tappa11/main.i"
+	@echo "... Tappa11/main.s"
 .PHONY : help
 
 

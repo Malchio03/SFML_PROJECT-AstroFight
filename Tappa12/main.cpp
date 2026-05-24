@@ -12,7 +12,7 @@
 //////////////////////
 
 // window
-const char* window_title = "11 - explosion";
+const char* window_title = "12 - win & gameover";
 const unsigned window_width = 800;
 const unsigned window_height = 600;
 const float max_frame_rate = 60;
@@ -145,6 +145,7 @@ struct State
     sf::Sound winSound;
 
     State() : spaceship(), 
+              current_wave(0),
               move_spaceship_left(false), 
               move_spaceship_right(false), 
               move_spaceship_up(false),

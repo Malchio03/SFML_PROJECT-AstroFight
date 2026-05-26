@@ -358,6 +358,19 @@ Tappa13/fast:
 .PHONY : Tappa13/fast
 
 #=============================================================================
+# Target rules for targets named Tappa14
+
+# Build rule for target.
+Tappa14: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tappa14
+.PHONY : Tappa14
+
+# fast build rule for target.
+Tappa14/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa14.dir/build.make CMakeFiles/Tappa14.dir/build
+.PHONY : Tappa14/fast
+
+#=============================================================================
 # Target rules for targets named sfml-system
 
 # Build rule for target.
@@ -825,6 +838,30 @@ Tappa13/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa13.dir/build.make CMakeFiles/Tappa13.dir/Tappa13/main.cpp.s
 .PHONY : Tappa13/main.cpp.s
 
+Tappa14/main.o: Tappa14/main.cpp.o
+.PHONY : Tappa14/main.o
+
+# target to build an object file
+Tappa14/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa14.dir/build.make CMakeFiles/Tappa14.dir/Tappa14/main.cpp.o
+.PHONY : Tappa14/main.cpp.o
+
+Tappa14/main.i: Tappa14/main.cpp.i
+.PHONY : Tappa14/main.i
+
+# target to preprocess a source file
+Tappa14/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa14.dir/build.make CMakeFiles/Tappa14.dir/Tappa14/main.cpp.i
+.PHONY : Tappa14/main.cpp.i
+
+Tappa14/main.s: Tappa14/main.cpp.s
+.PHONY : Tappa14/main.s
+
+# target to generate assembly for a file
+Tappa14/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tappa14.dir/build.make CMakeFiles/Tappa14.dir/Tappa14/main.cpp.s
+.PHONY : Tappa14/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -854,6 +891,7 @@ help:
 	@echo "... Tappa11"
 	@echo "... Tappa12"
 	@echo "... Tappa13"
+	@echo "... Tappa14"
 	@echo "... benchmark_residual"
 	@echo "... freetype"
 	@echo "... ogg"
@@ -904,6 +942,9 @@ help:
 	@echo "... Tappa13/main.o"
 	@echo "... Tappa13/main.i"
 	@echo "... Tappa13/main.s"
+	@echo "... Tappa14/main.o"
+	@echo "... Tappa14/main.i"
+	@echo "... Tappa14/main.s"
 .PHONY : help
 
 

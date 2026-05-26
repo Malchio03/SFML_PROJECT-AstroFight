@@ -117,6 +117,7 @@ void State::field_limits()
 {
     if(spaceship.pos.x < 0.0)
         spaceship.pos.x = 0.0;
+        
     if(spaceship.pos.x + spaceship.size.x > window_width)
         spaceship.pos.x = window_width - spaceship.size.x;
 

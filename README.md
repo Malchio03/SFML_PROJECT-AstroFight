@@ -26,4 +26,4 @@ Aprire il terminale e lanciare:
 
 Per testare le tappe precedenti, sostituire il numero nell'eseguibile (es. `./Tappa08`).
 
-Per muovere la navicella usare le frecce direzionali
+Per muovere la navicella usare le frecce direzionali. Per la relazione scaricare con il tasto download, GitHub per qualche motivo non riesce a caricare la preview del documento 

@@ -141,7 +141,7 @@ struct State
               move_spaceship_right(false), 
               move_spaceship_up(false),
               move_spaceship_down(false),
-              focus(false),
+              focus(true),
               shootSound(shootBuffer),
               enemyShootSound(enemyShootBuffer),
               hitSound(hitBuffer)

@@ -48,7 +48,7 @@ struct State
               move_spaceship_right(false), 
               move_spaceship_up(false),
               move_spaceship_down(false),
-              focus(false) {}
+              focus(true) {}
               
     void draw(sf::RenderWindow& window);
     void update(float elapsed); 

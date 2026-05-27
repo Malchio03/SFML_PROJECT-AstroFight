@@ -22,4 +22,8 @@ Aprire il terminale e lanciare:
 1. `cd build`
 2. `./Tappa14` (su Mac/Linux) oppure `.\Tappa14.exe` (su Windows)
 
+**NOTA**: facendo dei test ho notato che su macchina Windows dopo il comando  `cd build` bisogna usare ` .\Debug\Tappa14.exe` 
+
 Per testare le tappe precedenti, sostituire il numero nell'eseguibile (es. `./Tappa08`).
+
+Per muovere la navicella usare le frecce direzionali

@@ -1,0 +1,36 @@
+.cache/
+.idea/
+.vs/
+.vscode/
+.DS_Store
+build/
+CMakeUserPresets.json
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CPack*.cmake
+CTest*.cmake
+_deps/
+SFMLConfig.cmake
+SFMLConfigVersion.cmake
+SFML*Dependencies.cmake
+*.Ninja*
+MakeFile
+Makefile
+*.make
+compile_commands.json
+
+# Binary output
+*.a
+*.so
+bin/
+
+# Test/coverage files
+*include.cmake
+patch_coverage.cmake
+
+# Xcode files
+*.xcsettings
+*.xcscheme
+*.pbxproj
+*.xcuserstate
